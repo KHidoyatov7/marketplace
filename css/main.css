@@ -361,6 +361,12 @@ body {
   line-height: 45px;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .categories__top__title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
 .categories__cards {
   display: grid;
   grid-template-columns: repeat(4, 240px);
