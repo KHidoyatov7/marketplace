@@ -1,0 +1,157 @@
+.creators {
+    margin-top: 160px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items:end;
+        margin-bottom: 60px;
+        &__head {
+            color: white;
+            &__title {
+                font-family: $secondary-font;
+                font-size: 38px;
+                font-weight: 600;
+                line-height: 45px;
+                margin-bottom: 10px;
+                @include for-tablet {
+                    font-size: 28px;
+                    line-height: 39px;
+                }
+            }
+            &__text {
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 35px;
+                @include for-tablet {
+                    font-size: 16px;
+                    line-height: 22px;
+                    max-width: 343px;
+                }
+            }
+        }
+        .button {
+            padding: 0px 50px;
+            height:65px;
+            border-radius: 20px;
+            border-color: $border-color;
+            background-color: unset;
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+            color: white;
+            font-family: $main-font;
+            @include for-mobile {
+                display: none;
+            }
+        }
+        .button:hover {
+            background-color: $border-color;
+            color: #fff;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 240px);
+        grid-gap: 30px;
+        margin-bottom: 30px;
+        &__card {
+            background-color: $card-color;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            &__span1 {
+                border-style: solid;
+                border: 0;
+                width: 30px;
+                height: 30px;
+                padding: 5px 10px;
+                border-radius: 100%;
+                background-color: rgba(43, 43, 43, 1);
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: 400;
+                font-family: $third-font;
+                color: $gray-color;
+                @include for-tablet {
+                    position: absolute;
+                    z-index: 2;
+                }
+            }
+            &__div {
+                text-align: center;
+                img {
+                    position: relative;
+                    @include for-tablet {
+                        max-width: 60px;
+                        max-height: 60px;
+                    }
+                }
+                &__title {
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 30px;
+                    margin: 20px 0 5px 0;
+                }
+                &__span {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color:$gray-color;
+                }
+                &__sale {
+                    font-family: $third-font;
+                }
+                @include for-tablet {
+                    text-align: left;
+                    display: flex;
+                    column-gap: 20px;
+                    align-items: center;
+                }
+            }
+        }
+        .none {
+            @include for-tablet {
+                display: none;
+            }
+        }
+        @include for-tablet {
+            display: grid;
+            grid-template-columns: 330px 330px;
+            grid-template-rows: 100px 100px;
+        }
+        @include for-mobile {
+            display: flex;
+            flex-direction: column;
+            max-width: 315px;
+            margin: 0 auto;
+        }
+    }
+    @include for-tablet {
+        max-width: 690px;
+        margin: 160px auto;
+    }
+    @include for-mobile {
+        max-width: 315px;
+    }
+    .bottom {
+        display: none;
+        color: #fff;
+        @include for-mobile {
+            padding: 0px 50px;
+            height:65px;
+            border-radius: 20px;
+            border-color: $border-color;
+            background-color: unset;
+            display: flex;
+            align-items: center;
+            column-gap: 12px;
+            color: white;
+            font-family: $main-font;
+        }
+    }
+    .bottom:hover {
+        background-color: $border-color;
+        color: #fff;
+    }
+}

@@ -1,0 +1,67 @@
+.categories {
+    margin-top: 160px;
+    &__top {
+        margin-bottom: 60px;
+        &__title {
+            font-weight: 600;
+            font-size: 38px;
+            line-height: 45px;
+            color: #fff;
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 240px);
+        grid-gap: 30px;
+        @include for-tablet {
+            grid-template-columns: repeat(4, 150px);
+        }
+        @include for-mobile {
+            grid-template-columns: repeat(2, 150px);
+        }
+        &__card {
+            background-color: $card-color;
+            border-radius: 24px;
+            position: relative;
+            padding-bottom: 20px;
+            &__category {
+                border-top-left-radius: 24px;
+                border-top-right-radius: 24px;
+                margin-bottom: 25px;
+                @include for-tablet {
+                    max-width: 150px;
+                }
+            }
+            &__icon {
+                position: absolute;
+                top: 70px;
+                left: 70px;
+                @include for-tablet {
+                    width: 63px;
+                    top: 43px;
+                    left: 43px;
+                }
+            }
+            &__span {
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30px;
+                color: #fff;
+                margin: 20px 30px;
+                max-width: 110px;
+                @include for-tablet {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    @include for-tablet {
+        max-width: 690px;
+        margin: 0 auto;
+    }
+    @include for-mobile {
+        max-width: 315px;
+        margin: 0 auto;
+    }
+}
